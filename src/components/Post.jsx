@@ -5,7 +5,7 @@ import { deletePost } from '../redux/actions';
 function Post({post, deletable}) {
 	const dispatch = useDispatch();
 	return (
-		<div className="card">
+		<div className="card mt-2">
 			<div className="card-body">
 				<div className="row justify-content-between">
 					<div className="col">

@@ -25,10 +25,7 @@ export function fetchPosts(url) {
 		}
 		catch (e) {
 			jsonResp = [];
-			dispatch(showAlert('Something went wrong!'));
-			setTimeout(() => {
-				dispatch(hideAlert('Something went wrong!'));
-			}, 2000)
+			dispatch(showAlert('Something went wrong with fetching!'));
 		}
 		finally {
 			setTimeout(() => {
@@ -56,9 +53,14 @@ export function hideLoader() {
 
 
 export function showAlert(text) {
-	return {
-		type: SHOW_ALERT,
-		payload: text
+	return dispatch => {
+		dispatch({
+			type: SHOW_ALERT,
+			payload: text
+		})
+		setTimeout(() => {
+			dispatch(hideAlert())
+		}, 2000)
 	}
 }
 
