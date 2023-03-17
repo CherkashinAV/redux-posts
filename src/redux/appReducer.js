@@ -2,7 +2,7 @@ import { HIDE_ALERT, HIDE_SKELETON, SHOW_ALERT, SHOW_SKELETON } from "./types"
 
 const initialState = {
 	postsLoading: false,
-	alert: false
+	alert: ''
 }
 
 export const appReducer = (state = initialState, action) => {
@@ -20,12 +20,12 @@ export const appReducer = (state = initialState, action) => {
 		case SHOW_ALERT:
 			return {
 				...state,
-				alert: true
+				alert: action.payload
 			}
 		case HIDE_ALERT:
 			return {
 				...state,
-				alert: false
+				alert: ''
 			}
 		default: 
 			return state

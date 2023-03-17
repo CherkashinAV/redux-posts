@@ -24,7 +24,7 @@ function App() {
         </div>
       </div>
       {alert && <div className="alert alert-danger fixed-bottom" role="alert">
-        This is a danger alert—check it out!
+        {alert}
       </div>}
     </div>
   );
