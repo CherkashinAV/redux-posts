@@ -17,7 +17,7 @@ function AsyncPosts() {
 		return <Skeleton />
 	}
 
-	const url = 'https://jsonplaceholder.typ=code.com/posts?_limit=5';
+	const url = 'https://jsonplaceholder.typicode.com/posts?_limit=5';
 	return (
 			<div>
 				{posts?.length
