@@ -18,7 +18,7 @@ function AddPostForm({createPost}) {
 	return (
 		<form onSubmit={submitHandler}>
 			<input ref={input} type="text" className="form-control" id="title"></input>
-			<button type="submit" className="btn btn-primary mt-2">Add</button>
+			<button type="submit" className="btn btn-success mt-2">Add</button>
 		</form>
 	)
 }

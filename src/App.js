@@ -1,8 +1,10 @@
+import { useSelector } from "react-redux";
 import AddPostForm from "./components/AddPostForm";
 import AsyncPosts from "./components/AsyncPosts";
 import Posts from "./components/Posts";
 
 function App() {
+  const alert = useSelector(state => state.app.alert)
   return (
     <div className="container">
       <div className="row">
@@ -21,6 +23,9 @@ function App() {
           <AsyncPosts />
         </div>
       </div>
+      {alert && <div class="alert alert-danger fixed-bottom" role="alert">
+        This is a danger alert—check it out!
+      </div>}
     </div>
   );
 }

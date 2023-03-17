@@ -7,7 +7,7 @@ function Posts({posts}) {
 	 <div>
 		{posts?.length
 			? 
-			posts.map((post) => <Post post={post} key={post.id}/>)
+			posts.map((post) => <Post post={post} deletable={true} key={post.id}/>)
 			:
 			<h5>No posts available</h5>
 		}
